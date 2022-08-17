@@ -9,7 +9,7 @@
       <span>({{format_url post.post_url}})</span>
     </div>
     <div>
-      {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}
+      {{post.vote_count}} {{format_plural "upvote" post.vote_count}} by you on {{format_date post.created_at}}
       |
       <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
     </div>
@@ -20,7 +20,7 @@
 
 <form class="comment-form">
   <div>
-    <textarea name="comment-body"></textarea>
+    <textarea name="comment-body" class="bg-success"></textarea>
   </div>
 
   <div>
